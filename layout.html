@@ -3,15 +3,14 @@
 	<link href="dist/css/vendor/bootstrap.min.css" rel="stylesheet">
 	<link href="dist/css/flat-ui.min.css" rel="stylesheet">
 	<link href="docs/assets/css/demo.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="dist/css/custom.css">
 
 	<!--[if lt IE 9]>
       <script src="dist/js/vendor/html5shiv.js"></script>
       <script src="dist/js/vendor/respond.min.js"></script>
     <![endif]-->
-
 </head>
 <body>
-			
 
 <div class="page-container">
   
@@ -40,9 +39,9 @@
       <div class="row row-offcanvas row-offcanvas-left">
         
         <!--sidebar-->
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation" style="padding:0px;">
           <div data-spy="affix" data-offset-top="45" data-offset-bottom="90" class="affix-top">
-            <ul class="nav nav-tabs">
+            <ul id="component" class="nav nav-tabs" >
                 <li class="" style="width:100%"><a href="#A" data-toggle="tab">Walls</a></li>
                 <li class="active" style="width:100%"><a href="#B" data-toggle="tab">Tables</a></li>
                 <li class="" style="width:100%"><a href="#C" data-toggle="tab">Others</a></li>
@@ -51,47 +50,20 @@
         </div><!--/sidebar-->
   	
         <!--/main-->
-        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav" style="padding:0px;">
           <div class="row">
               
            
             
-          <div class="col-sm-6">
+          <div class="col-xs-12">
               <div class="panel panel-default">
-                    <div class="panel-body">
-      
-                      
-                      <div class="tabbable">
-                        <div class="tab-content">
-                          <div class="tab-pane" id="A">
-                            <div class="well well-sm">Wall selected.</div>
-                          </div>
-                          <div class="tab-pane active" id="B">
-                            <div class="well well-sm">Table selected.</div>
-                          </div>
-                          <div class="tab-pane" id="C">
-                            <div class="well well-sm">Others selected.</div>
-                          </div>
-                        </div>
-                      </div> <!-- /tabbable -->
-                    
-                      <div class="col-sm-12 text-center">
-                        <ul class="pagination center-block" style="display:inline-block;">
-                          <li><a href="#">«</a></li>
-                          <li><a href="#">1</a></li>
-                          <li><a href="#">2</a></li>
-                          <li><a href="#">3</a></li>
-                          <li><a href="#">4</a></li>
-                          <li><a href="#">5</a></li>
-                          <li><a href="#">»</a></li>
-                        </ul>
-                      </div>
-                    
-                  </div><!--/panel-body-->
-               </div> <!--/panel-->
-            </div><!--/col-6-->
-          
-          	
+	            <div class="panel-body" style="padding:0px;">
+	            	
+	            	
+
+            	</div><!--/panel-body-->
+           </div> <!--/panel-->
+        </div><!--/col-6-->
           
         </div><!--/.col-xs-12-->
       </div><!--/.row-->
@@ -100,13 +72,16 @@
 </div>
 
 
+<script src="dist/js/layoutfunc.js"></script>
 <script src="dist/js/vendor/jquery.min.js"></script>
 <script src="dist/js/flat-ui.min.js"></script>
 <script src="docs/assets/js/application.js"></script>
+
 <script>
       videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
 </script>
 
+<script src="dist/js/bonsai-0.4.1.min.js"></script>
 
 </body>
 </html>
