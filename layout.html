@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+	<link href="dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="dist/css/flat-ui.min.css" rel="stylesheet">
+	<link href="docs/assets/css/demo.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+      <script src="dist/js/vendor/html5shiv.js"></script>
+      <script src="dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+			
+
+<div class="page-container">
+  
+	<!-- top navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    	<div class="navbar-header">
+           <a class="navbar-brand" href="#">Restaurant</a>
+		            </div>
+		            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+		              <ul class="nav navbar-nav navbar-right" style="margin-right: 0px;">
+		                <li class="dropdown">
+		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Name<b class="caret"></b></a>
+		                  <span class="dropdown-arrow"></span>
+		                  <ul class="dropdown-menu" style="margin:0px;">
+		                    <li><a href="#">Home</a></li>
+		                    <li><a href="#">Settings</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#">Logout</a></li>
+		                  </ul>
+		                </li>
+		              </ul>
+    	</div>
+    </nav>
+      
+    <div class="container-fluid" style="margin-top: 55px;">
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+        <!--sidebar-->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div data-spy="affix" data-offset-top="45" data-offset-bottom="90" class="affix-top">
+            <ul class="nav nav-tabs">
+                <li class="" style="width:100%"><a href="#A" data-toggle="tab">Walls</a></li>
+                <li class="active" style="width:100%"><a href="#B" data-toggle="tab">Tables</a></li>
+                <li class="" style="width:100%"><a href="#C" data-toggle="tab">Others</a></li>
+            </ul>
+           </div>
+        </div><!--/sidebar-->
+  	
+        <!--/main-->
+        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
+          <div class="row">
+              
+           
+            
+          <div class="col-sm-6">
+              <div class="panel panel-default">
+                    <div class="panel-body">
+      
+                      
+                      <div class="tabbable">
+                        <div class="tab-content">
+                          <div class="tab-pane" id="A">
+                            <div class="well well-sm">Wall selected.</div>
+                          </div>
+                          <div class="tab-pane active" id="B">
+                            <div class="well well-sm">Table selected.</div>
+                          </div>
+                          <div class="tab-pane" id="C">
+                            <div class="well well-sm">Others selected.</div>
+                          </div>
+                        </div>
+                      </div> <!-- /tabbable -->
+                    
+                      <div class="col-sm-12 text-center">
+                        <ul class="pagination center-block" style="display:inline-block;">
+                          <li><a href="#">«</a></li>
+                          <li><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li><a href="#">»</a></li>
+                        </ul>
+                      </div>
+                    
+                  </div><!--/panel-body-->
+               </div> <!--/panel-->
+            </div><!--/col-6-->
+          
+          	
+          
+        </div><!--/.col-xs-12-->
+      </div><!--/.row-->
+    </div>
+  </div><!--/.container-->
+</div>
+
+
+<script src="dist/js/vendor/jquery.min.js"></script>
+<script src="dist/js/flat-ui.min.js"></script>
+<script src="docs/assets/js/application.js"></script>
+<script>
+      videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
+</script>
+
+
+</body>
+</html>
