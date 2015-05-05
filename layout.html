@@ -39,33 +39,33 @@
       <div class="row row-offcanvas row-offcanvas-left">
         
         <!--sidebar-->
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation" style="padding:0px;">
+        <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation" style="padding:0px;">
           <div data-spy="affix" data-offset-top="45" data-offset-bottom="90" class="affix-top">
             <ul id="component" class="nav nav-tabs" >
                 <li class="" style="width:100%"><a href="#A" data-toggle="tab">Wall</a></li>
-                <li class="active" style="width:100%"><a href="#B" data-toggle="tab">Table</a></li>
-                <li class="active" style="width:100%"><a href="#C" data-toggle="tab">Counter</a></li>
-                <li class="active" style="width:100%"><a href="#D" data-toggle="tab">Kitchen</a></li>
-                <li class="active" style="width:100%"><a href="#E" data-toggle="tab">Door</a></li>
-                <li class="active" style="width:100%"><a href="#F" data-toggle="tab">Washroom</a></li>
-                <li class="active" style="width:100%"><a href="#G" data-toggle="tab">Textbox</a></li>
-                <li class="active" style="width:100%"><a href="#H" data-toggle="tab">Comment</a></li>            
-                <li class="active" style="width:100%"><a href="#I" data-toggle="tab">Miscellaneous</a></li>
+                <li class="" style="width:100%"><a href="#B" data-toggle="tab">Table</a></li>
+                <li class="" style="width:100%"><a href="#C" data-toggle="tab">Counter</a></li>
+                <li class="" style="width:100%"><a href="#D" data-toggle="tab">Kitchen</a></li>
+                <li class="" style="width:100%"><a href="#E" data-toggle="tab">Door</a></li>
+                <li class="" style="width:100%"><a href="#F" data-toggle="tab">Washroom</a></li>
+                <li class="" style="width:100%"><a href="#G" data-toggle="tab">Textbox</a></li>
+                <li class="" style="width:100%"><a href="#H" data-toggle="tab">Comment</a></li>            
+                <li class="" style="width:100%"><a href="#I" data-toggle="tab">Miscellaneous</a></li>
             </ul>
            </div>
         </div><!--/sidebar-->
   	
         <!--/main-->
-        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav" style="padding:0px;">
+        <div class="col-xs-12 col-sm-10" data-spy="scroll" data-target="#sidebar-nav" style="padding:0px;">
           <div class="row">
               
            
             
           <div class="col-xs-12">
               <div class="panel panel-default">
-	            <div class="panel-body" style="padding:0px;">
+	            <div class="panel-body" id="build" style="padding:0px; height:570px;">
 	            	
-	            	
+
 
             	</div><!--/panel-body-->
            </div> <!--/panel-->
@@ -88,6 +88,52 @@
 </script>
 
 <script src="dist/js/bonsai-0.4.1.min.js"></script>
+
+<script>
+  bonsai.run(document.getElementById('build'), {
+    code: function() {
+      /**
+ * Paths w/ drag events.
+ */
+
+for (var a = 0; a < 3; ++a) {
+  for (var b = 0; b < 3; ++b) {
+    (function() {
+
+      var x, y,
+          fill = color('red').darker(.1).randomize('hue');
+
+          new Bitmap('table.jpg').on('mouseover', function() {
+          this.attr('fillColor', fill.lighter(.2));
+        })
+        .on('mouseout', function() {
+          this.attr('fillColor', fill);
+        })
+        .on('multi:pointerdown', function(e) {
+          // Catch new x/y at beginning of drag
+          x = this.attr('x');
+          y = this.attr('y');
+        })
+        .on('multi:drag', function(e){
+          this.attr({
+            x: x + e.diffX,
+            y: y + e.diffY
+          });
+        })
+        .emit('multi:pointerdown')
+        .addTo(stage).attr('height',50).attr('width',50);
+
+      
+
+    }());
+  }
+}
+
+    },
+    width: 1138,
+    height: 592
+  });
+</script>
 
 </body>
 </html>
